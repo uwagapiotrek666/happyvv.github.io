@@ -64,7 +64,6 @@
             margin-bottom: 2.5rem;
         }
 
-        /* Przycisk akcji */
         .btn {
             background: linear-gradient(to right, var(--primary-pink), var(--secondary-pink));
             color: white;
@@ -85,7 +84,6 @@
             box-shadow: 0 15px 30px rgba(255, 117, 140, 0.5);
         }
 
-        /* Ukryty odtwarzacz YT */
         #youtube-player {
             position: absolute;
             top: -9999px;
@@ -108,7 +106,6 @@
             to { opacity: 1; transform: scale(1); }
         }
 
-        /* Cząsteczki serc */
         .heart-particle {
             position: absolute;
             pointer-events: none;
@@ -142,7 +139,7 @@
 
     <script>
         let player;
-        const VIDEO_ID = 'KNF_-EtCQR4'; // ID piosenki "Weekend - Jesteś zajebista"
+        const VIDEO_ID = 'KNF_-EtCQR4'; 
         const START_SECOND = 47;
 
         function onYouTubeIframeAPIReady() {
@@ -168,13 +165,12 @@
         }
 
         function startExperience() {
-            // Uruchomienie muzyki
             if (player && player.playVideo) {
                 player.seekTo(START_SECOND, true);
                 player.playVideo();
             }
 
-            // Aktualizacja UI
+           
             const btn = document.getElementById('action-btn');
             const instr = document.getElementById('instruction');
             const surprise = document.getElementById('surprise');
@@ -183,9 +179,8 @@
             instr.style.opacity = '0.6';
             surprise.style.display = 'block';
 
-            // Efekt wizualny
+         
             createHearts();
-            // Powtórzenie serduszek po krótkiej chwili dla lepszego efektu
             setTimeout(createHearts, 1500);
         }
 
@@ -216,3 +211,4 @@
     </script>
 </body>
 </html>
+
